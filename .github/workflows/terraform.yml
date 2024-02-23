@@ -36,7 +36,7 @@ jobs:
       with:
         create_credentials_file: true
         workload_identity_provider: 'projects/855322041347/locations/global/workloadIdentityPools/engineer-actions/providers/github'
-        service_account: 'github-engineer@workload-identity-414813.iam.gserviceaccount.com'
+        service_account: 'dev-engineer@workload-identity-414813.iam.gserviceaccount.com'
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
