@@ -16,9 +16,9 @@ permissions:
 
 jobs:
   terraform:
-    name: 'Terraform dev'
+    name: 'Terraform development'
     runs-on: ubuntu-latest
-    environment: dev
+    environment: development
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
