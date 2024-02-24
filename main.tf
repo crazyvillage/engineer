@@ -18,12 +18,12 @@ provider "google" {
 
 # [START storage_kms_encryption_tfstate]
 resource "google_kms_key_ring" "terraform_state" {
-  name     = "${random_id.bucket_prefix.hex}-bucket-tfstate"
+  name     = "dev-bucket-tfstate"
   location = "us"
 }
 
 resource "google_kms_crypto_key" "terraform_state_bucket" {
-  name            = "test-terraform-state-bucket"
+  name            = "dev-terraform-state-bucket"
   key_ring        = google_kms_key_ring.terraform_state.id
   rotation_period = "86400s"
 
@@ -49,7 +49,7 @@ resource "random_id" "bucket_prefix" {
 }
 
 resource "google_storage_bucket" "default" {
-  name          = "${random_id.bucket_prefix.hex}-bucket-tfstate"
+  name          = "dev-bucket-tfstate"
   force_destroy = false
   location      = "US"
   storage_class = "STANDARD"
