@@ -39,7 +39,7 @@ data "google_project" "project" {
 resource "google_project_iam_member" "default" {
   project = data.google_project.project.project_id
   role    = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
-  member  = "serviceAccount:service-${data.google_project.project.number}@inventor-414623.iam.gserviceaccount.com"
+  member  = "serviceAccount:service-${data.google_project.project.number}@gs-project-accounts.iam.gserviceaccount.com"
 }
 # [END storage_kms_encryption_tfstate]
 
