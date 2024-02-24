@@ -18,7 +18,7 @@ provider "google" {
 
 # [START storage_kms_encryption_tfstate]
 resource "google_kms_key_ring" "terraform_state" {
-  name     = "dev-bucket-tfstate"
+  name     = "dev-crazyvillage-tfstate"
   location = "us"
 }
 
@@ -49,7 +49,7 @@ resource "random_id" "bucket_prefix" {
 }
 
 resource "google_storage_bucket" "default" {
-  name          = "dev-bucket-tfstate"
+  name          = "dev-crazyvillage-tfstate"
   force_destroy = false
   location      = "US"
   storage_class = "STANDARD"
