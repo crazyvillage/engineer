@@ -1,6 +1,6 @@
-﻿terraform {
+terraform {
   backend "gcs" {
-    bucket  = "dev-crazyvillage-tfstate"
-    prefix  = "terraform/state"
+    bucket = "dev-crazyvillage-tfstate"
+    prefix = "terraform/state"
   }
 }
