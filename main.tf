@@ -44,9 +44,6 @@ resource "google_project_iam_member" "default" {
 # [END storage_kms_encryption_tfstate]
 
 # [START storage_bucket_tf_with_versioning]
-resource "random_id" "bucket_prefix" {
-  byte_length = 8
-}
 
 resource "google_storage_bucket" "default" {
   name          = "dev-crazyvillage-tfstate"
